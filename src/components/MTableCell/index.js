@@ -15,6 +15,7 @@ function MTableCell(props) {
     cellEditable,
     columnDef,
     errorState,
+    value,
     ...spreadProps
   } = props;
   const handleClickCell = (e) => {
@@ -57,7 +58,7 @@ function MTableCell(props) {
     <TableCell
       {...spreadProps}
       size={props.size}
-      value={props.value}
+      data-value={value}
       style={getStyle(props)}
       align={cellAlignment}
       onClick={handleClickCell}
